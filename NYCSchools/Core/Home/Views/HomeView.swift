@@ -2,17 +2,20 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
+    let fetchSATDataService: FetchSATDataService
 
-    init(viewModel: HomeViewModel) {
+    init(viewModel: HomeViewModel, fetchSATDataService: FetchSATDataService) {
         self.viewModel = viewModel
+        self.fetchSATDataService = fetchSATDataService
     }
 
     var body: some View {
         NavigationView {
             List(viewModel.filteredSchools) { school in
-                NavigationLink(destination: SchoolDetailView(school: school)) {
+                NavigationLink(destination: SchoolDetailView(
+                    viewModel: SchoolDetailViewModel(school: school, dataService: fetchSATDataService)
+                )) {
                     VStack(alignment: .leading) {
-                        
                         Text(school.schoolName)
                             .font(.headline)
                         Text("Location: \(school.location)")
@@ -26,7 +29,6 @@ struct HomeView: View {
                             }
                         }
                     }
-                
                 }
             }
             .refreshable {

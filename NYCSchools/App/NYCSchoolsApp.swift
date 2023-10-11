@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct NYCSchoolsApp: App {
     @StateObject private var viewModel = HomeViewModel(dataService: FetchDataService())
+    private let fetchSATDataService = FetchSATDataService()
     
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: viewModel)
+            HomeView(viewModel: viewModel, fetchSATDataService: fetchSATDataService)
         }
     }
 }

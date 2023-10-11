@@ -15,7 +15,7 @@ struct School: Identifiable, Codable, Equatable {
     // Add other properties you need for the school information
     
     enum CodingKeys: String, CodingKey {
-            case id = "dbn" // Map "dbn" to the "id" property
+            case id = "dbn" // Mapping "dbn" to the "id" property
             case schoolName = "school_name"
             case location
             case overview = "overview_paragraph"

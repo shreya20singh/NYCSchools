@@ -17,7 +17,6 @@ class FetchDataService {
         let queryItems = [
             URLQueryItem(name: "$limit", value: String(perPage)),
             URLQueryItem(name: "$offset", value: String((page - 1) * perPage)),
-            // Add other query parameters as needed
         ]
 
         guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
@@ -60,20 +59,6 @@ class FetchDataService {
                 return try decoder.decode([School].self, from: data)
             } else {
                 throw APIError.invalidURL
-            }
-        }
-
-    func fetchSATScores() async throws -> [SATScore] {
-            guard let url = URL(string: "https://data.cityofnewyork.us/resource/f9bf-2cp4.json") else {
-                throw APIError.invalidURL
-            }
-
-            do {
-                let (data, _) = try await URLSession.shared.data(from: url)
-                let decoder = JSONDecoder()
-                return try decoder.decode([SATScore].self, from: data)
-            } catch {
-                throw APIError.requestFailed
             }
         }
 }

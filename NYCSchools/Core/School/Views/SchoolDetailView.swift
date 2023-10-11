@@ -1,30 +1,31 @@
-//
-//  SchoolDetailView.swift
-//  NYCSchools
-//
-//  Created by Aerologix Aerologix on 10/11/23.
-//
-
 import SwiftUI
 
 struct SchoolDetailView: View {
-    let school: School
+    @ObservedObject var viewModel: SchoolDetailViewModel
 
     var body: some View {
         VStack {
-            Text(school.schoolName)
+            Text(viewModel.school.schoolName)
                 .font(.title)
 
-            Text("Location: \(school.location)")
+            Text("Location: \(viewModel.school.location)")
                 .font(.subheadline)
 
-            Text("Overview: \(school.overview)")
+            Text("Overview: \(viewModel.school.overview)")
                 .font(.body)
 
-            // You can add more details here, such as displaying SAT scores
+            if viewModel.isLoadingSATScores {
+                ProgressView("Loading SAT Scores...")
+            } else if let satScores = viewModel.satScores {
+                Text("SAT Scores:")
+                Text("Critical Reading Avg Score: \(satScores.readingScore)")
+                Text("Math Avg Score: \(satScores.mathScore)")
+                Text("Writing Avg Score: \(satScores.writingScore)")
+            } else {
+                Text("SAT Scores: N/A")
+            }
         }
         .padding()
         .navigationTitle("School Detail")
     }
 }
-
