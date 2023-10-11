@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8EBABF5A2AD73F130057852E /* SchoolDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBABF592AD73F130057852E /* SchoolDetailViewModel.swift */; };
 		8EBABF5D2AD73F8C0057852E /* FetchSATDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBABF5C2AD73F8C0057852E /* FetchSATDataService.swift */; };
+		8EBABF5F2AD7527A0057852E /* SchoolLocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBABF5E2AD7527A0057852E /* SchoolLocationMapView.swift */; };
 		8EEB568B2AD6F1CB00A1D096 /* NYCSchoolsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB568A2AD6F1CB00A1D096 /* NYCSchoolsApp.swift */; };
 		8EEB568D2AD6F1CB00A1D096 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB568C2AD6F1CB00A1D096 /* ContentView.swift */; };
 		8EEB568F2AD6F1CE00A1D096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB568E2AD6F1CE00A1D096 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		8EBABF592AD73F130057852E /* SchoolDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewModel.swift; sourceTree = "<group>"; };
 		8EBABF5C2AD73F8C0057852E /* FetchSATDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSATDataService.swift; sourceTree = "<group>"; };
+		8EBABF5E2AD7527A0057852E /* SchoolLocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolLocationMapView.swift; sourceTree = "<group>"; };
 		8EEB56872AD6F1CB00A1D096 /* NYCSchools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCSchools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEB568A2AD6F1CB00A1D096 /* NYCSchoolsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsApp.swift; sourceTree = "<group>"; };
 		8EEB568C2AD6F1CB00A1D096 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				8EEB56CF2AD7063600A1D096 /* SchoolDetailView.swift */,
+				8EBABF5E2AD7527A0057852E /* SchoolLocationMapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				8EEB56C42AD6F7D400A1D096 /* SATModel.swift in Sources */,
 				8EEB56CE2AD6FB2D00A1D096 /* Errors.swift in Sources */,
 				8EEB56C62AD6F98300A1D096 /* HomeView.swift in Sources */,
+				8EBABF5F2AD7527A0057852E /* SchoolLocationMapView.swift in Sources */,
 				8EBABF5A2AD73F130057852E /* SchoolDetailViewModel.swift in Sources */,
 				8EEB56CB2AD6FA7600A1D096 /* FetchDataService.swift in Sources */,
 				8EEB568B2AD6F1CB00A1D096 /* NYCSchoolsApp.swift in Sources */,

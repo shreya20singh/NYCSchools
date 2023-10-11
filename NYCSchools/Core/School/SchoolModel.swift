@@ -3,15 +3,43 @@ struct School: Identifiable, Codable, Equatable {
     var schoolName: String
     var location: String
     var overview: String
-    var phoneNumber: String // Add phone number
-    var address: String // Add address
+    var phoneNumber: String
+    var address: String
+    var email: String?
+    var website: String?
+    var latitude: Double
+    var longitude: Double
 
     enum CodingKeys: String, CodingKey {
         case id = "dbn"
         case schoolName = "school_name"
         case location
         case overview = "overview_paragraph"
-        case phoneNumber = "phone_number" // Map "phone_number" to "phoneNumber" property
-        case address = "primary_address_line_1" // Map "primary_address_line_1" to "address" property
+        case phoneNumber = "phone_number"
+        case address = "primary_address_line_1"
+        case email = "school_email"
+        case website
+        case latitude
+        case longitude
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        schoolName = try container.decode(String.self, forKey: .schoolName)
+        location = try container.decode(String.self, forKey: .location)
+        overview = try container.decode(String.self, forKey: .overview)
+        phoneNumber = try container.decode(String.self, forKey: .phoneNumber)
+        address = try container.decode(String.self, forKey: .address)
+        email = try container.decodeIfPresent(String.self, forKey: .email)
+        website = try container.decodeIfPresent(String.self, forKey: .website)
+        latitude = (try container.decodeIfPresent(String.self, forKey: .latitude) ?? "0").doubleValue
+        longitude = (try container.decodeIfPresent(String.self, forKey: .longitude) ?? "0").doubleValue
+    }
+}
+
+extension String {
+    var doubleValue: Double {
+        return Double(self) ?? 0.0
     }
 }
