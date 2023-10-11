@@ -15,18 +15,13 @@ struct HomeView: View {
                 NavigationLink(destination: SchoolDetailView(
                     viewModel: SchoolDetailViewModel(school: school, dataService: fetchSATDataService)
                 )) {
-                    VStack(alignment: .leading) {
-                        Text(school.schoolName)
-                            .font(.headline)
-                        Text("Location: \(school.location)")
-                            .font(.subheadline)
-                    }
-                    .onAppear {
-                        if school == viewModel.filteredSchools.last {
-                            // This is the last school, trigger loading more schools
-                            Task {
-                                await viewModel.loadMoreSchools(currentSchool: school)
-                            }
+                    SchoolCellView(school: school) // Use the SchoolCellView here
+                }
+                .onAppear {
+                    if school == viewModel.filteredSchools.last {
+                        // This is the last school, trigger loading more schools
+                        Task {
+                            await viewModel.loadMoreSchools(currentSchool: school)
                         }
                     }
                 }
