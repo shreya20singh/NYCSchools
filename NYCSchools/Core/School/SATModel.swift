@@ -6,7 +6,6 @@ struct SATScore: Identifiable, Codable {
     var mathScore: String
     var readingScore: String
     var writingScore: String
-    // Add other properties you need for SAT scores
 
     enum CodingKeys: String, CodingKey {
         case id = "dbn"
@@ -14,7 +13,6 @@ struct SATScore: Identifiable, Codable {
         case mathScore = "sat_math_avg_score"
         case readingScore = "sat_critical_reading_avg_score"
         case writingScore = "sat_writing_avg_score"
-        // Add other keys for additional properties if needed
     }
 }
 

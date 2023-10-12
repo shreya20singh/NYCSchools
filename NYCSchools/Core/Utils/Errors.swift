@@ -2,7 +2,7 @@
 //  Errors.swift
 //  NYCSchools
 //
-//  Created by Aerologix Aerologix on 10/11/23.
+//  Created by Shreya Singh on 10/11/23.
 //
 
 import Foundation
