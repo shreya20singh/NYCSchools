@@ -1,9 +1,4 @@
 # 20231011-ShreyaSingh-NYCSchools
-![HomePage]![Simulator Screenshot - iPhone 14 Pro - 2023-10-11 at 20 32 46](https://github.com/shreya20singh/NYCSchools/assets/23652464/6d1ab5a9-84bb-484e-817c-355db2e84b42)
-![Search](![Simulator Screenshot - iphoneX - 2023-10-11 at 21 31 35](https://github.com/shreya20singh/NYCSchools/assets/23652464/f9d52e75-a63b-4549-9bb0-91f9a7b00dd1)
-![SchoolDetail]![Simulator Screenshot - iPhone 14 Pro - 2023-10-11 at 20 32 59](https://github.com/shreya20singh/NYCSchools/assets/23652464/f8038855-b88c-4b75-9236-914a9376e2e4)
-
-
 ## NYCSchools App Features
 
 ### School Listing
@@ -48,3 +43,9 @@ _File(s): SchoolLocationMapView.swift_
 
 Handle potential errors gracefully and display messages to the user in case of issues.
 _File(s): SchoolDetailViewModel.swift, Utils/Errors.swift_
+
+![HomePage]![Simulator Screenshot - iPhone 14 Pro - 2023-10-11 at 20 32 46](https://github.com/shreya20singh/NYCSchools/assets/23652464/6d1ab5a9-84bb-484e-817c-355db2e84b42)
+![Search](![Simulator Screenshot - iphoneX - 2023-10-11 at 21 31 35](https://github.com/shreya20singh/NYCSchools/assets/23652464/f9d52e75-a63b-4549-9bb0-91f9a7b00dd1)
+![SchoolDetail]![Simulator Screenshot - iPhone 14 Pro - 2023-10-11 at 20 32 59](https://github.com/shreya20singh/NYCSchools/assets/23652464/f8038855-b88c-4b75-9236-914a9376e2e4)
+
+
