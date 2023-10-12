@@ -17,8 +17,6 @@
 		8EEB568D2AD6F1CB00A1D096 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB568C2AD6F1CB00A1D096 /* ContentView.swift */; };
 		8EEB568F2AD6F1CE00A1D096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB568E2AD6F1CE00A1D096 /* Assets.xcassets */; };
 		8EEB56922AD6F1CE00A1D096 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EEB56912AD6F1CE00A1D096 /* Preview Assets.xcassets */; };
-		8EEB56A62AD6F1CF00A1D096 /* NYCSchoolsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56A52AD6F1CF00A1D096 /* NYCSchoolsUITests.swift */; };
-		8EEB56A82AD6F1CF00A1D096 /* NYCSchoolsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56A72AD6F1CF00A1D096 /* NYCSchoolsUITestsLaunchTests.swift */; };
 		8EEB56C22AD6F7B400A1D096 /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56C12AD6F7B400A1D096 /* SchoolModel.swift */; };
 		8EEB56C42AD6F7D400A1D096 /* SATModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56C32AD6F7D400A1D096 /* SATModel.swift */; };
 		8EEB56C62AD6F98300A1D096 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56C52AD6F98300A1D096 /* HomeView.swift */; };
@@ -27,7 +25,6 @@
 		8EEB56CE2AD6FB2D00A1D096 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56CD2AD6FB2D00A1D096 /* Errors.swift */; };
 		8EEB56D02AD7063600A1D096 /* SchoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56CF2AD7063600A1D096 /* SchoolDetailView.swift */; };
 		8EEB56D22AD711C400A1D096 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56D12AD711C400A1D096 /* HomeViewModel.swift */; };
-		8EEB56D52AD713B800A1D096 /* MockDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEB56D42AD713B800A1D096 /* MockDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +58,6 @@
 		8EEB56912AD6F1CE00A1D096 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8EEB56972AD6F1CE00A1D096 /* NYCSchoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYCSchoolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EEB56A12AD6F1CF00A1D096 /* NYCSchoolsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYCSchoolsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EEB56A52AD6F1CF00A1D096 /* NYCSchoolsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsUITests.swift; sourceTree = "<group>"; };
-		8EEB56A72AD6F1CF00A1D096 /* NYCSchoolsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8EEB56C12AD6F7B400A1D096 /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
 		8EEB56C32AD6F7D400A1D096 /* SATModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SATModel.swift; sourceTree = "<group>"; };
 		8EEB56C52AD6F98300A1D096 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -71,7 +66,6 @@
 		8EEB56CD2AD6FB2D00A1D096 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		8EEB56CF2AD7063600A1D096 /* SchoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailView.swift; sourceTree = "<group>"; };
 		8EEB56D12AD711C400A1D096 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		8EEB56D42AD713B800A1D096 /* MockDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +106,6 @@
 			children = (
 				8EEB56892AD6F1CB00A1D096 /* NYCSchools */,
 				8EEB569A2AD6F1CE00A1D096 /* NYCSchoolsTests */,
-				8EEB56A42AD6F1CF00A1D096 /* NYCSchoolsUITests */,
 				8EEB56882AD6F1CB00A1D096 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,15 +144,6 @@
 				8EEB56D32AD7139200A1D096 /* MockServices */,
 			);
 			path = NYCSchoolsTests;
-			sourceTree = "<group>";
-		};
-		8EEB56A42AD6F1CF00A1D096 /* NYCSchoolsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8EEB56A52AD6F1CF00A1D096 /* NYCSchoolsUITests.swift */,
-				8EEB56A72AD6F1CF00A1D096 /* NYCSchoolsUITestsLaunchTests.swift */,
-			);
-			path = NYCSchoolsUITests;
 			sourceTree = "<group>";
 		};
 		8EEB56B42AD6F58400A1D096 /* App */ = {
@@ -298,7 +282,6 @@
 		8EEB56D32AD7139200A1D096 /* MockServices */ = {
 			isa = PBXGroup;
 			children = (
-				8EEB56D42AD713B800A1D096 /* MockDataService.swift */,
 				8EC3A2642AD770B3006ACEF5 /* FetchDataServiceTests.swift */,
 				8EC3A2652AD770B4006ACEF5 /* FetchSATDataServiceTests.swift */,
 			);
@@ -457,7 +440,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC3A2672AD770B4006ACEF5 /* FetchSATDataServiceTests.swift in Sources */,
-				8EEB56D52AD713B800A1D096 /* MockDataService.swift in Sources */,
 				8EC3A2662AD770B4006ACEF5 /* FetchDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,8 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EEB56A62AD6F1CF00A1D096 /* NYCSchoolsUITests.swift in Sources */,
-				8EEB56A82AD6F1CF00A1D096 /* NYCSchoolsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -39,6 +39,7 @@ struct SchoolDetailView: View {
             Divider()
 
             VStack(alignment: .leading, spacing: 2) {
+                //Using reusable component InfoHStack
                 InfoHStack(text: "Phone:", value: viewModel.school.phoneNumber)
                 InfoHStack(text: "Email:", value: viewModel.school.email ?? "N/A")
                 InfoHStack(text: "Website:", value: viewModel.school.website ?? "N/A")

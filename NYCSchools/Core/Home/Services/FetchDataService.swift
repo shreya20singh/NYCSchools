@@ -9,6 +9,8 @@ import Foundation
 
 class FetchDataService {
     
+    //I have paginated the api to boost the app performance
+    
     func fetchNYCSchools(page: Int, perPage: Int) async throws -> [School] {
         guard let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else {
             throw APIError.invalidURL
@@ -43,12 +45,12 @@ class FetchDataService {
 
     
     func fetchMoreSchools(page: Int, pageSize: Int) async throws -> [School] {
-            // Adjust the API request to include the page/offset parameter
+            // Adjusted the API request to include the page/offset parameter
             guard let url = URL(string: "https://data.cityofnewyork.us/resource/s3k6-pzi2.json") else {
                 throw APIError.invalidURL
             }
 
-            // Add a parameter to specify the page
+            // Added a parameter to specify the page
         var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
             let pageQueryItem = URLQueryItem(name: "$offset", value: String((page - 1) * pageSize))
             urlComponents?.queryItems = [pageQueryItem]

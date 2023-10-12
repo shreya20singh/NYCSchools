@@ -9,7 +9,7 @@ struct School: Identifiable, Codable, Equatable {
     var website: String?
     var latitude: Double
     var longitude: Double
-
+// We can add more feilds from the api based on requirements
     enum CodingKeys: String, CodingKey {
         case id = "dbn"
         case schoolName = "school_name"
@@ -22,7 +22,9 @@ struct School: Identifiable, Codable, Equatable {
         case latitude
         case longitude
     }
-
+/*decoding the api based on needs. If any of the keys is empty, this code will add intialize it to nil
+ also, coverted long lat values from String to Double
+ */
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)
