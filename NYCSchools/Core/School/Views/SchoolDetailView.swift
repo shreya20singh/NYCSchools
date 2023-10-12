@@ -48,30 +48,30 @@ struct SchoolDetailView: View {
             Divider()
             
             GeometryReader { geometry in
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color.secondary.opacity(0.5))
-                                    .frame(height: geometry.size.height)
-                                    .cornerRadius(8)
-                                
-                                VStack {
-                                    if viewModel.isLoadingSATScores {
-                                        ProgressView("Loading SAT Scores...")
-                                    } else if let satScores = viewModel.satScores {
-                                        Text("SAT Scores:")
-                                            .font(.headline)
-                                        VStack{
-                                            InfoHStack(text: "Reading Avg Score:", value: satScores.readingScore)
-                                            InfoHStack(text: "Math Avg Score:", value: satScores.writingScore)
-                                            InfoHStack(text: "Writing Avg Score:", value: satScores.writingScore)
-                                        }
-                                        .padding()
-                                    } else {
-                                        Text("SAT Scores: N/A")
-                                    }
-                                }
+                ZStack {
+                    Rectangle()
+                        .fill(Color.secondary.opacity(0.2))
+                        .frame(height: geometry.size.height)
+                        .cornerRadius(8)
+                    
+                    VStack {
+                        if viewModel.isLoadingSATScores {
+                            ProgressView("Loading SAT Scores...")
+                        } else if let satScores = viewModel.satScores {
+                            Text("SAT Scores:")
+                                .font(.headline)
+                            VStack{
+                                InfoHStack(text: "Reading Avg Score:", value: satScores.readingScore)
+                                InfoHStack(text: "Math Avg Score:", value: satScores.writingScore)
+                                InfoHStack(text: "Writing Avg Score:", value: satScores.writingScore)
                             }
+                            .padding()
+                        } else {
+                            Text("SAT Scores: N/A")
                         }
+                    }
+                }
+            }
             
             Divider()
             
